@@ -12,6 +12,12 @@
 		4A5B09D62ACB460F00F9273F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5B09D42ACB460F00F9273F /* Main.storyboard */; };
 		4A5B09D82ACB461100F9273F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5B09D72ACB461100F9273F /* Assets.xcassets */; };
 		4A5B09DB2ACB461100F9273F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5B09D92ACB461100F9273F /* LaunchScreen.storyboard */; };
+		4A5B09E32ACB463A00F9273F /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5B09E22ACB463A00F9273F /* Logging */; };
+		4A5B09E52ACB464A00F9273F /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5B09E42ACB464A00F9273F /* Logging */; };
+		4A5B09E82ACB465D00F9273F /* ImageEmbossGRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5B09E72ACB465D00F9273F /* ImageEmbossGRPC */; };
+		4A5B09EA2ACB468000F9273F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A5B09E92ACB468000F9273F /* Settings.bundle */; };
+		4A5B09F02ACB4BF100F9273F /* ImageEmbossGRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 4A5B09EF2ACB4BF100F9273F /* ImageEmbossGRPC */; };
+		4AA3DD422ACB60F300153B7F /* ImageEmbossGRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA3DD412ACB60F300153B7F /* ImageEmbossGRPC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,7 @@
 		4A5B09D52ACB460F00F9273F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A5B09D72ACB461100F9273F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A5B09DA2ACB461100F9273F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A5B09E92ACB468000F9273F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +35,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5B09E52ACB464A00F9273F /* Logging in Frameworks */,
+				4A5B09E82ACB465D00F9273F /* ImageEmbossGRPC in Frameworks */,
+				4A5B09E32ACB463A00F9273F /* Logging in Frameworks */,
+				4A5B09F02ACB4BF100F9273F /* ImageEmbossGRPC in Frameworks */,
+				4AA3DD422ACB60F300153B7F /* ImageEmbossGRPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +49,7 @@
 		4A5B09C42ACB460F00F9273F = {
 			isa = PBXGroup;
 			children = (
+				4A5B09E92ACB468000F9273F /* Settings.bundle */,
 				4A5B09CF2ACB460F00F9273F /* ImageEmbossServer */,
 				4A5B09CE2ACB460F00F9273F /* Products */,
 			);
@@ -78,6 +91,13 @@
 			dependencies = (
 			);
 			name = ImageEmbossServer;
+			packageProductDependencies = (
+				4A5B09E22ACB463A00F9273F /* Logging */,
+				4A5B09E42ACB464A00F9273F /* Logging */,
+				4A5B09E72ACB465D00F9273F /* ImageEmbossGRPC */,
+				4A5B09EF2ACB4BF100F9273F /* ImageEmbossGRPC */,
+				4AA3DD412ACB60F300153B7F /* ImageEmbossGRPC */,
+			);
 			productName = ImageEmbossServer;
 			productReference = 4A5B09CD2ACB460F00F9273F /* ImageEmbossServer.app */;
 			productType = "com.apple.product-type.application";
@@ -106,6 +126,10 @@
 				Base,
 			);
 			mainGroup = 4A5B09C42ACB460F00F9273F;
+			packageReferences = (
+				4A5B09E12ACB463A00F9273F /* XCRemoteSwiftPackageReference "swift-log" */,
+				4AA3DD402ACB60F300153B7F /* XCRemoteSwiftPackageReference "swift-image-emboss-grpc" */,
+			);
 			productRefGroup = 4A5B09CE2ACB460F00F9273F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5B09EA2ACB468000F9273F /* Settings.bundle in Resources */,
 				4A5B09DB2ACB461100F9273F /* LaunchScreen.storyboard in Resources */,
 				4A5B09D82ACB461100F9273F /* Assets.xcassets in Resources */,
 				4A5B09D62ACB460F00F9273F /* Main.storyboard in Resources */,
@@ -349,6 +374,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A5B09E12ACB463A00F9273F /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.3;
+			};
+		};
+		4AA3DD402ACB60F300153B7F /* XCRemoteSwiftPackageReference "swift-image-emboss-grpc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sfomuseum/swift-image-emboss-grpc";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A5B09E22ACB463A00F9273F /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A5B09E12ACB463A00F9273F /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		4A5B09E42ACB464A00F9273F /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A5B09E12ACB463A00F9273F /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		4A5B09E72ACB465D00F9273F /* ImageEmbossGRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImageEmbossGRPC;
+		};
+		4A5B09EF2ACB4BF100F9273F /* ImageEmbossGRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImageEmbossGRPC;
+		};
+		4AA3DD412ACB60F300153B7F /* ImageEmbossGRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AA3DD402ACB60F300153B7F /* XCRemoteSwiftPackageReference "swift-image-emboss-grpc" */;
+			productName = ImageEmbossGRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A5B09C52ACB460F00F9273F /* Project object */;
 }
